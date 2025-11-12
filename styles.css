@@ -1,4 +1,4 @@
-  /* Estilos generales */
+    /* Estilos generales */
   * {
     margin: 0;
     padding: 0;
@@ -91,6 +91,7 @@ header {
     font-size: 1.5rem;
     margin-bottom: 0;
     color: black;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
 }
 
 .logo i {
@@ -110,18 +111,25 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 25px;
+    margin-left: 50px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: var(--text-color);
+    color: white;
     font-weight: 500;
     transition: color 0.3s ease;
+    background-color: black;
+    padding: 5px 5px;
+    border-radius: 10px;
+    border: 2px solid rgb(2, 214, 37);
+    transition: 0.2s ease;
 }
 
 nav ul li a:hover {
     color: red;
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 3px white;
 }
 
 .menu-toggle {
@@ -136,6 +144,7 @@ nav ul li a:hover {
 #inicio {
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
                 url("fondoInicio.jpeg");
+                backdrop-filter: blur(10px);
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -153,12 +162,19 @@ nav ul li a:hover {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: var(--dark-color);
+    text-shadow: 2px 2px 3px black;
 }
 
 .hero-content p {
     font-size: 1.2rem;
     margin-bottom: 30px;
     color: black;
+    text-shadow: 2px 2px 3px black;
+    background-color: rgba(15, 182, 0, 0.274);
+    border-radius: 10px;
+    padding: 10px 10px;
+    box-shadow: 2px 2px 3px black;
+   
 }
 .hero-content a{
     color: black;
@@ -169,7 +185,8 @@ nav ul li a:hover {
 #sobre-nosotros {
     background-color: var(--white);
 }
-.section-title h2{ color: black;}
+.section-title h2{ color: black;
+text-shadow: 1px 1px 2px black;}
 .section-title h2:hover{
     color:rgb(245, 0, 0);
     text-shadow: 2px 2px 3px black;
@@ -193,13 +210,14 @@ nav ul li a:hover {
     min-width: 300px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 3px black;
 }
 
 .about-image img {
     width: 100%;
     height: auto;
     display: block;
+    
 }
 
 .mission-vision {
@@ -219,19 +237,22 @@ nav ul li a:hover {
     background-color: var(--light-color);
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    text-shadow: 2px 2px 3px black;
 }
 
-.mission h3, .vision h3 {
+.mission h3 , .vision h3 {
     color: var(--primary-color);
     display: flex;
     align-items: center;
+
 }
 
 .mission h3 i, .vision h3 i {
     margin-right: 10px;
 }
-
+.mission p, .vision p{
+    text-shadow: 2px 2px 3px black;
+}
 
 #productos {
     background-color: var(--light-color);
@@ -303,10 +324,11 @@ nav ul li a:hover {
     font-size: 1.3rem;
     margin-bottom: 10px;
     color: var(--dark-color);
+    text-shadow: 1px 1px 3px black;
 }
 
 .product-info p {
-    color: #666;
+    color: #000000;
     font-size: 0.95rem;
 }
 
@@ -344,7 +366,9 @@ nav ul li a:hover {
     
 }
 .location-info h3{color: white;
-text-align: center;}
+text-align: center;
+text-shadow: 2px 2px 3px black;
+}
 .map-container {
     flex: 1;
     min-width: 300px;
@@ -391,31 +415,70 @@ text-align: center;}
 }
 .contact-info h3,p{ color:  white;}
 
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 30px;
-}
 
-.social-links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.social-links1 {
+    position: fixed;
+    background-color: rgb(252, 239, 203);
     width: 50px;
-    height: 50px;
-    background-color: white;
-    color: var(--white);
-    border-radius: 50%;
-    align-content: center;
-    font-size: 1.3rem;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px 5px;
+    font-size: 30px;
+    border: none;
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    box-shadow: 2px 2px 3px black;
     transition: all 0.3s ease;
-    text-decoration: none;
-    
 }
 
-.social-links a:hover {
-    background-color: var(--dark-color);
-    transform: translateY(-5px);
+.social-links1 i {
+    color: rgb(27, 143, 4);
+    font-size: 1.6rem;
+    text-shadow: 2px 2px 3px black;
+}
+.social-links1:hover{
+    font-size: 1.5rem;
+    width: 60px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+.social-links2 {
+    position: fixed;
+    background-color: rgb(252, 239, 203);
+    width: 50px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    transform: translateY(-49px);
+    z-index: 999;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px 5px;
+    font-size: 30px;
+    border: none;
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    box-shadow: 2px 2px 3px black;
+    transition: all 0.3s ease;
+}
+
+.social-links2 i {
+    color: rgb(27, 143, 4);
+    font-size: 1.6rem;
+    text-shadow: 2px 2px 3px black;
+}
+.social-links2:hover{
+    font-size: 1.5rem;
+    width: 60px;
+    height: 50px;
+    border-radius: 100px;
 }
 
 .contact-form {
@@ -537,7 +600,7 @@ footer {
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: var(--white);
+        background:linear-gradient(120deg, black, green);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: all 0.3s ease;
@@ -589,5 +652,4 @@ footer {
     .mission, .vision {
         min-width: 100%;
     }
-
 }
